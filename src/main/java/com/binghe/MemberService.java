@@ -9,6 +9,7 @@ public class MemberService {
     }
 
     public Member findById(Long id) {
+        System.out.println("MemberService 호출됨!");
         return memberRepository.findById(id)
             .orElseThrow(() -> new IllegalArgumentException("존재 하지 않는 유저입니다."));
     }
